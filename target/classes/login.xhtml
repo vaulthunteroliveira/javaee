@@ -11,14 +11,16 @@
 </h:head>
 
 <h:body>
+	<h1>Login</h1>
 	<h:form>
-		<h:panelGrid columns="1" cellpadding="5">  
-			<p:messages autoUpdate="true"/>
+		<p:messages autoUpdate="true"/>
+		<h:panelGrid columns="2" cellpadding="5">  
 			<h:outputText value="Usuário"/>
 			<p:inputText value="#{loginBean.user}"/>
 			<h:outputText value="Senha"/>
 			<p:password value="#{loginBean.password}" feedback="true"/>
-			<p:commandButton value="Entrar" action="#{loginBean.logarBean}"/>
+			<h:outputText/>
+			<p:commandButton value="Entrar" action="#{loginBean.logar}"/>
 		</h:panelGrid>
 	</h:form>
 

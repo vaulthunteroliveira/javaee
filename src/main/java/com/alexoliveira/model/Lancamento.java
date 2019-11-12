@@ -19,7 +19,7 @@ import javax.persistence.TemporalType;
 import com.alexoliveira.enums.TipoLancamento;
 
 @Entity
-@Table(name = "lancamento")
+@Table(name = "lancamentos")
 public class Lancamento implements Serializable {
 
 	private static final long serialVersionUID = 1L;

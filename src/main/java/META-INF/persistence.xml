@@ -7,6 +7,8 @@
 	<persistence-unit name="sistema-financeiro">
 	
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>com.alexoliveira.model.Lancamento</class>
+		<class>com.alexoliveira.model.Pessoa</class>
 		<properties>
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:mysql://localhost/financeiro" />
