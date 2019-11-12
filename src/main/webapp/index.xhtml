@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:ez="http://xmlns.jcp.org/jsf/composite/ezcomp">
+
+<h:head>
+	<title>Olá JSF</title>
+</h:head>
+
+<h:body>
+	<h:outputStylesheet library="assets" name="estilo.css" />
+	<h:outputScript library="assets" name="script.js" target="head" />
+	<h:form>
+
+		<h1>Olá #{olaBean.nome}!</h1>
+		<div id="div-form">
+			<h:inputText value="#{olaBean.nome}" />
+		</div>
+		<div id="div-form">
+			<h:commandButton value="me clique" action="#{olaBean.teste}" />
+		</div>
+		<div>
+			<h:commandButton value="ir para tela sobre"
+				action="#{olaBean.irParaTelaSobre}" />
+			<h:commandButton value="ir para tela formulário"
+				action="#{olaBean.irParaTelaFormulario}" />
+		</div>
+	</h:form>
+
+	<ui:repeat value="#{olaBean.arr}" var="time">
+		<h:outputLabel value="#{time}" />
+		<br />
+	</ui:repeat>
+
+	<br />
+	
+	<h:form id="meuForm">
+		<h:selectOneMenu value="#{olaBean.timeFavorito}"
+			id="timeFutebol">
+			<f:selectItem itemValue="Vitória" />
+			<f:selectItem itemValue="Flamengo" />
+			<f:selectItem itemValue="Palmeiras" />
+			<f:selectItem itemValue="Santos" />
+			<f:selectItem itemValue="São Paulo" />
+			<f:selectItem itemValue="Vasco" />
+			<f:selectItem itemValue="Outro" />
+		</h:selectOneMenu>
+		<br />
+		<h:selectManyMenu />
+		<br />
+		<h:selectOneListbox />
+		<br />
+		<h:selectManyListbox />
+	</h:form>
+
+</h:body>
+
+</html>
