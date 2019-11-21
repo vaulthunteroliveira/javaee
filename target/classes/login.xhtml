@@ -16,9 +16,11 @@
 		<p:messages autoUpdate="true"/>
 		<h:panelGrid columns="2" cellpadding="5">  
 			<h:outputText value="Usuário"/>
-			<p:inputText value="#{loginBean.user}"/>
+			<p:inputText value="#{loginBean.user}"
+			required="true" requiredMessage="por favor, informe o usuário."/>
 			<h:outputText value="Senha"/>
-			<p:password value="#{loginBean.password}" feedback="true"/>
+			<p:password value="#{loginBean.password}" feedback="true"
+			required="true" requiredMessage="por favor, informe a senha."/>
 			<h:outputText/>
 			<p:commandButton value="Entrar" action="#{loginBean.logar}"/>
 		</h:panelGrid>

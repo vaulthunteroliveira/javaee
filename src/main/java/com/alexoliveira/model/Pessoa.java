@@ -21,6 +21,9 @@ public class Pessoa implements Serializable {
 	@Column(length = 60, nullable = false)
 	private String nome;
 	
+	@Column(nullable = false)
+	private String email;
+	
 	public Long getId() {
 		return id;
 	}
@@ -35,6 +38,14 @@ public class Pessoa implements Serializable {
 	
 	public void setNome(String nome) {
 		this.nome = nome;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	@Override
